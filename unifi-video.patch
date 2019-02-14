@@ -8,20 +8,3 @@
 +		JVM_JMXREMOTE_HOST=$(hostname -i | cut -d' ' -f1)
  	[ -z "${JVM_JMXREMOTE_HOST}" ] || \
  		JVM_OPTS="${JVM_OPTS} -Djava.rmi.server.hostname=${JVM_JMXREMOTE_HOST}"
- 
-@@ -319,7 +319,6 @@
- 	start)
- 	require_root
-     update_limits
--        ulimit -H -c 200
-         echo 0x10 > /proc/self/coredump_filter
- 		if is_service_running "${PIDFILE}" >/dev/null; then
- 			log_verbose "${NAME} is already running..."
-@@ -335,7 +334,6 @@
- 		;;
- 	stop)
-  	require_root
--        ulimit -H -c 200
-         
-         log_verbose "Backing up ${DATADIR}/system.properties in ${BASEDIR}/etc/system.properties"
-         cp -f "${DATADIR}/system.properties" "${BASEDIR}/etc/system.properties"
