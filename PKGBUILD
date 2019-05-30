@@ -2,7 +2,7 @@
 # Maintainer: Donald Webster (fryfrog@gmail.com)
 
 pkgname=unifi-video
-pkgver=3.10.1
+pkgver=3.10.3
 pkgrel=1
 pkgdesc="Centralized management system for Ubiquiti UniFi Surveillance Cameras"
 arch=('x86_64')
@@ -11,13 +11,13 @@ license=('custom')
 depends=('mongodb' 'java-runtime>=8' 'java-runtime<9' 'java-jsvc' 'lsb-release')
 conflicts=('unifi-video-beta')
 install=unifi-video.install
-source=("${pkgname}-${pkgver}.deb::https://dl.ubnt.com/firmwares/unifi-video/v${pkgver}/${pkgname}.Ubuntu18.04_amd64.v${pkgver}.deb"
+source=("${pkgname}-${pkgver}.deb::https://dl.ubnt.com/firmwares/ufv/v${pkgver}/${pkgname}.Ubuntu18.04_amd64.v${pkgver}.deb"
         'unifi-video.service'
         'unifi-video.sysusers'
         'unifi-video.tmpfiles'
         'unifi-video.patch')
 
-sha256sums=('c74acc77b9cfb6d5208b8190138bae9315c97dbfb6706a333d6289f07ae84a49'
+sha256sums=('36b1520c64672fe9843d5352ba86408f138895041203b56234cd8290e102f911'
             '9df948b046347c25e7c83e4837284ef63d9f8d3f28daa20a6c36e203e3ebfdb3'
             '90fb2f826a70d3b7815cd6a2253c2af6754c17504be28ef92ee223bd02093730'
             'c31918e3ef0eb55f44639af0ae5db029654230b84d5ae0c55c18fbb2c80dfc70'
